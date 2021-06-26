@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'cabin bold';
+    src: local('Cabin-Bold'), url(Cabin-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'cabin regular';
+    src: local('Cabin-Regular'), url(Cabin-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'cabin semibold';
+    src: local('Cabin-SemiBold'), url(Cabin-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'dancing script';
+    src: local('DancingScript-VariableFont_wght'), url(DancingScript-VariableFont_wght.ttf) format('truetype');
+}

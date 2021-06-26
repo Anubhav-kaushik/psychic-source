@@ -1,0 +1,25 @@
+:root {
+    --heading-color: #461F1E;
+    --text-color: #4C1C1C;
+    --green: #87B157;
+    --diya-red: #B14E4A;
+    --arrow-color: #D5C3AA;
+    --background-color: #FDF5E9;
+    --light-green: #C5C885;
+    --orange: #CE7548;
+    --matt-red: #C3615D;
+    --blood-red: #C04547;
+    --light-orange: #C04547;
+    --link-color: #221F20;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    align-content: center;
+    
+}
