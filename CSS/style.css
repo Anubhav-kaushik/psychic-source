@@ -6,11 +6,12 @@
     --arrow-color: #D5C3AA;
     --background-color: #FDF5E9;
     --light-green: #C5C885;
-    --orange: #CE7548;
+    --orange: #FFC16B;
     --matt-red: #C3615D;
     --blood-red: #C04547;
     --light-orange: #C04547;
     --link-color: #221F20;
+    --sarvodhaya-grey: #526C77;
 }
 
 * {
@@ -20,6 +21,90 @@
 }
 
 body {
-    align-content: center;
-    
+    text-align: center;
+    margin: 1vh auto;
+    background-color: var(--background-color);
+}
+
+header {
+    height: 10vh;
+}
+
+.logo {
+    width: 15vw;
+    margin: 2vh auto;
+}
+
+section {
+    position: absolute;
+    background-color: var(--background-color);
+    height: 90vh;
+    width: 100vw;
+}
+
+.first-page {
+    height: 90vh;
+    z-index: 10;
+    display: none;
+}
+
+.main-heading-container {
+    width: 50%;
+    margin: 0vh auto;
+}
+
+.main-heading-container h1 {
+    margin-bottom: 2vh;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+.points-container {
+    width: 60%;
+    margin: 5vh auto 10vh;
+}
+
+.points {
+    margin: 0vh auto;
+    width: 45%;
+}
+
+.points figure {
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.points-text {
+    background-color: var(--orange);
+    height: 28vh;
+}
+
+.points h2 {
+    background-color: var(--sarvodhaya-grey);
+    color: white;
+    padding: 0.8em;
+    margin: 0;
+    width: 100%;
+}
+
+.points p {
+    color: var(--text-color);
+    padding: 1em 3em;
+}
+
+.start-button {
+    width: 5vw;
+    margin: auto;
+}
+
+.start-button svg {
+    width: 90%;
+}
+
+.resources {
+    text-align: left;
 }

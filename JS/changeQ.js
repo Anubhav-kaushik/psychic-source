@@ -71,6 +71,8 @@ let category = {'a': 0, 'b': 0, 'c': 0, 'd': 0, 'e': 0, 'f': 0, 'g': 0}
 
 var timeout;
 
+intialValue();
+
 function isChecked(name){
     let checkRadio = document.getElementsByName(name);
 
@@ -87,21 +89,28 @@ function getValue(name){
 
     for(let k=0;k<checkRadio.length;k++){
         if(checkRadio[k].checked){
-            return checkRadio[k].value;
+            return [checkRadio[k].value];
         }
+    }
+}
+
+function intialValue(boo=false, to=answersStatus){
+    let quesList = Object.keys(questions);
+
+    for(let i=0; i<quesList.length; i++){
+        to[quesList[i]] = boo;
     }
 }
 
 function getStatus(ques){
     for(let i=0; i<ques.length; i++){
         if(answersStatus[ques[i]]){
-            answers[ques[i]] = getValue(ques[i]);
+            answers[ques[i]] = getValue(ques[i])[0];
             continue;
         }
         answersStatus[ques[i]] = isChecked(ques[i]);
     }
 
-    let isAllFilled = 'none';
     for(let i=0; i<groups.length; i++){
         let temp = 'none';
         let quesNum = questionsInGroup(parseInt(groups[i][1]));
@@ -119,19 +128,11 @@ function getStatus(ques){
         }
 
         groupFilledStatus[groups[i]] = temp;
-
-        if(isAllFilled == 'none'){
-            isAllFilled = temp;
-            continue;
-        }
-        isAllFilled = (isAllFilled && temp);
     }
-
-    groupFilledStatus['all'] = isAllFilled;
 }
 
 function calculateAnswer(){
-    let quesRep = Object.keys(questions);
+    let quesRep = Object.keys(answers);
 
     for(let i=0; i<quesRep.length; i++){
         let marks = answers[quesRep[i]][1];
@@ -140,7 +141,7 @@ function calculateAnswer(){
         category[cat] += parseInt(marks);
     }
 
-    return top3dict(catTotal);
+    return top3dict(category);
 }
 
 function top3dict(keyValue){
@@ -197,18 +198,18 @@ function firstFalse(groupsList){
 let onScreen;
 
 function update(){
-    let quesRep = Object.keys(questions);
-    
-    getStatus(quesRep);
-
     let grp = firstFalse(groups);
     
+    getStatus(questionsInGroup(parseInt(grp[1])));
+    
     if(onScreen != grp){
-        clearContainer('questions-container')
+        if(onScreen != 'g5'){
+            clearContainer('questions-container')
 
-        onScreen = grp;
-        
-        enterQuestions(parseInt(onScreen[1]));
+            onScreen = grp;
+            
+            enterQuestions(parseInt(grp[1]));
+        }
     }
 
     timeout = setTimeout(update, 300);
@@ -222,8 +223,10 @@ function enterQuestions(groupNum){
     let startingValue = numberOfQuestions*(groupNum - 1)+1;
     let endingValue = numberOfQuestions*groupNum;
 
-    if(questions.length - endingValue < 0) {
-        endingValue = questions.length;
+    let quesRep = Object.keys(questions);
+
+    if(quesRep.length - endingValue < 0) {
+        endingValue = quesRep.length;
     }
 
     let quesPrefix = 'q';
@@ -232,12 +235,12 @@ function enterQuestions(groupNum){
 
     for(let i=startingValue; i<=endingValue; i++) {
         let question = quesPrefix + i;
+
         let cat = questions[question][0];
         let content = questions[question][1];
 
         let quesElement = document.createElement('div');
-        quesElement.className = 'question';
-        quesElement.setAttribute('id', question);
+        quesElement.setAttribute('class', question);
 
         let quesContent = document.createElement('p');
         quesContent.append(document.createTextNode(content));
@@ -285,7 +288,6 @@ function questionsInGroup(groupNum) {
 
 function clearContainer(name){
     let element = document.getElementsByClassName(name);
-
     for(let i=0; i<element.length; i++) {
         element[i].innerHTML = '';
     }
@@ -293,8 +295,6 @@ function clearContainer(name){
 
 function getResult() {
     clearTimeout(timeout);
-
-    console.log('getting result')
 
     let element = document.getElementsByClassName('questions-container');
     element[0].style.display = 'none';
@@ -304,8 +304,8 @@ function getResult() {
     let resultContainer = document.getElementsByClassName('result-container');
 
     for(let i=0; i<resultCatList.length; i++) {
-        let heading = resultData[resultCatList[i][0]];
-        let description = resultData[resultCatList[i][1]];
+        let heading = resultData[resultCatList[i]][0];
+        let description = resultData[resultCatList[i]][1];
 
         let result = document.createElement('div');
         result.setAttribute('class', 'result');
@@ -322,3 +322,4 @@ function getResult() {
         resultContainer[0].appendChild(result);
     }
 }
+

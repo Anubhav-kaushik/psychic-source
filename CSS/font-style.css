@@ -1,2 +1,57 @@
 @import url(../Fonts/style.css);
 
+html {
+    font-size: 19px;
+}
+
+.dance {
+    font-family: 'dancing script';
+    font-weight: 700;
+}
+
+.regular {
+    font-family: 'cabin regular';
+}
+
+.semibold {
+    font-family: 'cabin semibold';
+}
+
+.bold {
+    font-family: 'cabin bold';
+    font-weight: 400;
+}
+
+.main-heading-container h1 {
+    font-size: 4rem;
+}
+
+.main-heading-container p {
+    font-size: 1.3rem;
+}
+
+.points *{
+    font-size: 1.23rem;
+}
+
+.isize h3 {
+    font-size: 0.8rem;
+}
+
+.result-container h2 {
+    font-size: 3.5rem;
+}
+
+.result-container > p {
+    font-size: 1.5rem;
+}
+
+.resources h4 {
+    font-size: 1rem;
+}
+
+.resources a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: var(--link-color);
+}

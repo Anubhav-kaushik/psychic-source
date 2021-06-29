@@ -1,0 +1,22 @@
+<svg viewBox="0 0 183.6 96.6" style="enable-background:new 0 0 183.6 96.6;" xml:space="preserve">
+<style>
+	.logo-circle{fill:#576C76;}
+	.petals{fill:none;stroke:#FFFFFF;stroke-width:1.87;stroke-miterlimit:10;}
+</style>
+<g>
+	<g>
+		<circle class="logo-circle" cx="91.6" cy="96.6" r="91.8"/>
+	</g>
+</g>
+<g>
+	<g>
+		<path class="petals" d="M91.8,89.2c0,0,19.5-23.1,51.2-9.9c-4.2,3.8-8.6,7.3-13.2,10.7C120.9,96.6,109.8,101.2,91.8,89.2z"/>
+		<path class="petals" d="M125.8,75.3c0,0,10.2-10.4,12.8-17.5c0,0-30.9-2.4-46.9,31.3"/>
+		<path class="petals" d="M112.9,64.7c0,0,6.9-10.6,4.5-22.2c0,0-26.2,4.5-25.8,47.1"/>
+		<path class="petals" d="M91.9,89.2c0,0-19.6-23.1-51.3-9.9c4.2,3.8,8.6,7.3,13.2,10.7C62.7,96.6,73.9,101.2,91.9,89.2z"/>
+		<path class="petals" d="M57.9,75.3c0,0-10.2-10.4-12.8-17.5c0,0,30.9-2.4,46.9,31.3"/>
+		<path class="petals" d="M70.7,64.7c0,0-6.9-10.6-4.5-22.2c0,0,26.2,4.5,25.8,47.1"/>
+		<path class="petals" d="M99.8,55.2c0,0-0.4-14.4-7.9-21.5c0,0-6.7,6.7-7.7,22.6"/>
+	</g>
+</g>
+</svg>
