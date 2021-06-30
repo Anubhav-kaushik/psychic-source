@@ -1,7 +1,6 @@
 .second-page {
     z-index: 9;
     display: none;
-    margin-top: 1vh;
     background-image: url(../SVG/background_2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
