@@ -209,7 +209,18 @@ function update(){
             onScreen = grp;
             
             enterQuestions(parseInt(grp[1]));
+        } else{
+            let btn = document.getElementsByClassName('submit-btn');
+            btn[0].setAttribute('onclick', 'getResult()');
+            btn[0].style.backgroundColor = '#CC3A41';
+            btn[0].style.cursor = 'pointer';
         }
+    }
+
+    if(grp == 'g5') {
+        let btn = document.getElementsByClassName('submit-btn');
+        btn[0].style.display = 'block';
+        btn[0].style.backgroundColor = '#CC3A4155';
     }
 
     timeout = setTimeout(update, 300);
@@ -241,20 +252,40 @@ function enterQuestions(groupNum){
 
         let quesElement = document.createElement('div');
         quesElement.setAttribute('class', question);
+        quesElement.classList.add('flex');
+        quesElement.classList.add('ques');
+
+        let quesbox = document.createElement('div');
+        quesbox.setAttribute('class', 'qsize');
 
         let quesContent = document.createElement('p');
         quesContent.append(document.createTextNode(content));
+        quesContent.classList.add('text-color');
 
-        quesElement.appendChild(quesContent);
+        quesbox.appendChild(quesContent);
+        quesElement.appendChild(quesbox);
 
         for(let j=1; j<=numberOfOptions; j++) {
+            let inpContainer = document.createElement('div');
+            inpContainer.setAttribute('class', 'isize');
+
+            let cls = 'i'+j+'i';
+
             let inpElement = document.createElement('input');
             inpElement.setAttribute('type', 'radio');
             inpElement.setAttribute('name', question);
             inpElement.setAttribute('id', question+cat+j);
             inpElement.setAttribute('value', cat+j);
+            inpElement.setAttribute('class', cls);
 
-            quesElement.appendChild(inpElement);
+            let labelElement = document.createElement('label');
+            labelElement.setAttribute('for', question+cat+j);
+            labelElement.setAttribute('class', 'labels');
+            labelElement.classList.add('l'+j);
+
+            inpContainer.appendChild(inpElement);
+            inpContainer.appendChild(labelElement);
+            quesElement.appendChild(inpContainer);
         }  
         
         quesContainer[0].appendChild(quesElement);
@@ -296,30 +327,28 @@ function clearContainer(name){
 function getResult() {
     clearTimeout(timeout);
 
-    let element = document.getElementsByClassName('questions-container');
+    let element = document.getElementsByClassName('second-page');
     element[0].style.display = 'none';
 
     let resultCatList = calculateAnswer();
 
-    let resultContainer = document.getElementsByClassName('result-container');
+    let resultContainer = document.getElementsByClassName('third-page');
 
     for(let i=0; i<resultCatList.length; i++) {
-        let heading = resultData[resultCatList[i]][0];
-        let description = resultData[resultCatList[i]][1];
+        let result = document.getElementById(resultCatList[i]);
 
-        let result = document.createElement('div');
-        result.setAttribute('class', 'result');
-
-        let head = document.createElement('h3');
-        head.appendChild(document.createTextNode(heading));
-
-        let para = document.createElement('p');
-        para.appendChild(document.createTextNode(description));
-
-        result.appendChild(head);
-        result.appendChild(para);
-
-        resultContainer[0].appendChild(result);
+        result.classList.remove('hidden');
     }
+
+    resultContainer[0].style.display = "block";
 }
 
+function startQuiz() {
+    let element = document.getElementsByClassName('first-page');
+    element[0].style.display = 'none';
+
+    let nextPage = document.getElementsByClassName('second-page');
+    nextPage[0].style.display = 'block';
+
+    update()
+}

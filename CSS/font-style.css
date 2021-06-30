@@ -1,7 +1,7 @@
 @import url(../Fonts/style.css);
 
 html {
-    font-size: 19px;
+    font-size: 16px;
 }
 
 .dance {
@@ -38,12 +38,21 @@ html {
     font-size: 0.8rem;
 }
 
+.qsize>p {
+    font-size: 1.21rem;
+    font-family: cabin regular;
+}
+
 .result-container h2 {
     font-size: 3.5rem;
 }
 
-.result-container > p {
+.result-container> p {
     font-size: 1.5rem;
+}
+
+.details {
+    font-size: 1.4rem;
 }
 
 .resources h4 {

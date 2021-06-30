@@ -10,71 +10,33 @@
     <link rel="stylesheet" href="SVG/favicon.ico">
     <link rel="stylesheet" href="CSS/svg-style.css">
     <link rel="stylesheet" href="CSS/questions-style.css">
+    <link rel="stylesheet" href="CSS/result-style.css">
     <script src="JS/changeQ.js"></script>
     <title>Psychic Source</title>
 </head>
 
 <body>
-    <header>
-        <figure class="logo">
-            <img src="SVG/logo.svg" alt="psychic source">
-        </figure>
-    </header>
     <main>
         <section class="first-page">
-
+            <figure class="logo">
+                <img src="SVG/logo.svg" alt="psychic source">
+            </figure>
             <div class="main-heading-container">
-                <h1 class="dance">Break Free From Limiting Beliefs</h1>
-                <p class="regular">Self-limiting beliefs are stories that we tell ourselves about our potential,
+                <h1 class="dance heading-color">Break Free From Limiting Beliefs</h1>
+                <p class="regular text-color">Self-limiting beliefs are stories that we tell ourselves about our potential,
                     purpose, and place in life that hinder our ability to grow and thrive. These beliefs are dangerous
                     because:</p>
             </div>
             <div class="flex points-container">
                 <div class="points point1">
                     <figure>
-                        <svg viewBox="0 0 183.6 96.6" style="enable-background:new 0 0 183.6 96.6;"
-                            xml:space="preserve">
-                            <style>
-                                .logo-circle {
-                                    fill: #576C76;
-                                }
-
-                                .petals {
-                                    fill: none;
-                                    stroke: #FFFFFF;
-                                    stroke-width: 1.87;
-                                    stroke-miterlimit: 10;
-                                }
-                            </style>
-                            <g>
-                                <g>
-                                    <circle class="logo-circle" cx="91.6" cy="96.6" r="91.8" />
-                                </g>
-                            </g>
-                            <g>
-                                <g>
-                                    <path class="petals"
-                                        d="M91.8,89.2c0,0,19.5-23.1,51.2-9.9c-4.2,3.8-8.6,7.3-13.2,10.7C120.9,96.6,109.8,101.2,91.8,89.2z" />
-                                    <path class="petals"
-                                        d="M125.8,75.3c0,0,10.2-10.4,12.8-17.5c0,0-30.9-2.4-46.9,31.3" />
-                                    <path class="petals" d="M112.9,64.7c0,0,6.9-10.6,4.5-22.2c0,0-26.2,4.5-25.8,47.1" />
-                                    <path class="petals"
-                                        d="M91.9,89.2c0,0-19.6-23.1-51.3-9.9c4.2,3.8,8.6,7.3,13.2,10.7C62.7,96.6,73.9,101.2,91.9,89.2z" />
-                                    <path class="petals"
-                                        d="M57.9,75.3c0,0-10.2-10.4-12.8-17.5c0,0,30.9-2.4,46.9,31.3" />
-                                    <path class="petals" d="M70.7,64.7c0,0-6.9-10.6-4.5-22.2c0,0,26.2,4.5,25.8,47.1" />
-                                    <path class="petals" d="M99.8,55.2c0,0-0.4-14.4-7.9-21.5c0,0-6.7,6.7-7.7,22.6" />
-                                </g>
-                            </g>
-                        </svg>
-
-
+                        <img src="SVG/flower in circle-01-01.svg" alt="flower">
                     </figure>
                     <div class="points-text">
                         <h2 class="bold">Thoughts Create Reality</h2>
-                    <p class="regular">You can manifest painful restrictions in your life simply by telling yourself
-                        that
-                        they exist. Fortunately, the opposite is also true. That's right:</p>
+                        <p class="regular">You can manifest painful restrictions in your life simply by telling yourself
+                            that
+                            they exist. Fortunately, the opposite is also true. That's right:</p>
                     </div>
                 </div>
                 <div class="points point2">
@@ -118,77 +80,172 @@
                     </figure>
                     <div class="points-text">
                         <h2 class="bold">You Can Manifest Your Highest Self</h2>
-                    <p class="regular">The first step is identifying the self-limiting beliefs that are getting in the
-                        way
-                        of your growth. Then, you can smash these barriers and break free to live a beautiful,
-                        breathtaking
-                        life.</p>
+                        <p class="regular">The first step is identifying the self-limiting beliefs that are getting in
+                            the
+                            way
+                            of your growth. Then, you can smash these barriers and break free to live a beautiful,
+                            breathtaking
+                            life.</p>
                     </div>
                 </div>
             </div>
-            <figure class="start-button" onclick="update()">
-                <svg viewBox="0 0 88 88">
+            <div class="start-button" onclick="startQuiz()">
+                <svg viewBox="-10 -10 98 98">
                     <g>
                         <circle class="arrow-svg outer-circle" cx="41.96" cy="41.96" r="40.96" />
                         <polyline class="arrow-svg right-arrow" points="36.7 19.77 53.18 41.14 36.7 62.14" />
                     </g>
                 </svg>
-            </figure>
+            </div>
         </section>
+
         <section class="second-page">
-            <div class="questions-container">
-                <div class="labels-container">
-                    <div class="qsize"></div>
-                    <div class="isize i1">
-                        <h3 class="semibold">I've never thought this.</h3>
-                        <div class="triangle"></div>
-                    </div>
-                    <div class="isize i2">
-                        <h3 class="semibold">I may have thought that way once or twice in the past.</h3>
-                    </div>
-                    <div class="isize i3">
-                        <h3 class="semibold">I occasionally think this or similar thoughts.</h3>
-                    </div>
-                    <div class="isize i4">
-                        <h3 class="semibold">I feel this way often.</h3>
-                    </div>
-                    <div class="isize i5">
-                        <h3 class="semibold">I believe this is true.</h3>
-                    </div>
+            <figure class="logo">
+                <img src="SVG/logo.svg" alt="psychic source">
+            </figure>
+            <div class="labels-container">
+                <div class="qsize"></div>
+                <div class="isize i1">
+                    <h3 class="semibold">I've never thought this.</h3>
+                </div>
+                <div class="isize i2">
+                    <h3 class="semibold">I may have thought that way once or twice in the past.</h3>
+                </div>
+                <div class="isize i3">
+                    <h3 class="semibold">I occasionally think this or similar thoughts.</h3>
+                </div>
+                <div class="isize i4">
+                    <h3 class="semibold">I feel this way often.</h3>
+                </div>
+                <div class="isize i5">
+                    <h3 class="semibold">I believe this is true.</h3>
                 </div>
             </div>
-            
+
+            <div class="questions-container"></div>
+            </div>
+
+            <button class="submit-btn bold">SUBMIT</button>
         </section>
 
-        <button onclick="getResult()">submit</button>
-
-        <section class="result-container third-page">
-            <h2 class="dance">The areas that you struggle with the most are:</h2>
-            <div class="result"></div>
-            <div class="result"></div>
-            <div class="result"></div>
-            <p class="regular">Breaking out of limiting beliefs is easier with support. Speaking with a trusted psychic
-                advisor can help you see the truth in your situation and surroundings, so you can banish those beliefs
-                that aren't serving you well.</p>
-            <div class="resources regular">
-                <h4>Resources:</h4>
-                <a
-                    href="https://elenihope.com/limiting-beliefs-blocking-happiness/?utm_medium=social&utm_source=pinterest&utm_campaign=tailwind_smartloop&utm_content=smartloop&utm_term=5221818">
-                    https://elenihope.com/limiting-beliefs-blocking-happiness/?utm_medium=social&utm_source=pinterest&utm_campaign=tailwind_smartloop&utm_content=smartloop&utm_term=5221818
-                </a>
-                <a href="https://medium.com/new-earth-consciousness/stop-arguing-for-your-limitations-75dc85781fc5">
-                    https://medium.com/new-earth-consciousness/stop-arguing-for-your-limitations-75dc85781fc5
-                </a>
-                <a href="https://tomillama.com/limiting-beliefs#LB3">
-                    https://tomillama.com/limiting-beliefs#LB3
-                </a>
-                <a
-                    href="http://www.livelikeamomboss.com/how-to-uncover-your-limiting-mom-beliefs-and-start-to-parent-on-your-own-terms/">
-                    http://www.livelikeamomboss.com/how-to-uncover-your-limiting-mom-beliefs-and-start-to-parent-on-your-own-terms/
-                </a>
-                <a href="https://medium.com/@refinedliz/20-limiting-beliefs-that-mess-with-your-dreams-b4cfeb2f66ca">
-                    https://medium.com/@refinedliz/20-limiting-beliefs-that-mess-with-your-dreams-b4cfeb2f66ca
-                </a>
+        <section class="third-page">
+            <figure class="logo">
+                <img src="SVG/logo.svg" alt="psychic source">
+            </figure>
+            <div class="result-container">
+                <h2 class="dance heading-color">The areas that you struggle with the most are:</h2>
+                <div class="results">
+                    <div class="result hidden" id="a">
+                        <div class="title">
+                            <img src="SVG/AMBITIONS.svg" alt="Ambitions">
+    
+                        </div>
+                        <div class="details regular">
+                            <p>Limiting beliefs cause you to feel like you don't know your purpose or you're in a place
+                                where you simply can't pursue it. Instead, embrace the fact that every stage of life can be
+                                the perfect one for that moment and there's nothing keeping you from moving steadily
+                                forward.</p>
+                        </div>
+                    </div>
+                    <div class="result  hidden" id="b">
+                        <div class="title">
+                            <img src="SVG/LOVE.svg" alt="Love">
+                        </div>
+                        <div class="details  regular">
+                            <p>Finding love starts with loving yourself. When you tell yourself that you're unworthy, you
+                                slam the door to bountiful opportunities for partnership and affection. While it IS a good
+                                idea to make time to focus on yourself before you focus on finding a partner, beware of
+                                limiting beliefs that you're taking this time because you're in any way broken.</p>
+                        </div>
+                    </div>
+                    <div class="result  hidden" id="c">
+                        <div class="title">
+                            <img src="SVG/HEALTH.svg" alt="Health">
+                        </div>
+                        <div class="details regular">
+                            <p>It's easy to justify limiting beliefs about your health and appearance because you may think
+                                you can PROVE that they're true. You know how often you get ill and every body has its
+                                limitations. However, rephrasing these beliefs will help reframe those boundaries. Replace
+                                "I'm always sick," with "I'll feel better soon," or switch "I don't like how I look," with
+                                "I love my body the way it is."</p>
+                        </div>
+                    </div>
+                    <div class="result  hidden" id="d">
+                        <div class="title">
+                            <img src="SVG/FRIENDS AND FAMILY.svg" alt="Friends and Family">
+                        </div>
+                        <div class="details regular">
+                            <p>The people you share your life with can be a tremendous asset to your health, happiness, and
+                                personal growth if you let them. While you should stay mindful of others, you need to escape
+                                from limitations built on pleasing or caring for them. Like the flight attendant tells you
+                                on the plane, you have to put on your own oxygen mask first so you're awake and breathing to
+                                help those around you.</p>
+                        </div>
+                    </div>
+                    <div class="result  hidden" id="e">
+                        <div class="title">
+                            <img src="SVG/CAREER.svg" alt="Career">
+                        </div>
+                        <div class="details regular">
+                            <p>Workplace success stems from confidence. Stop telling yourself what you don't know and start
+                                weaving a powerful story about all that you can learn. And that idea that you can't do work
+                                you love? Ditch that limiting belief! Find things to love in what you do or go do something
+                                you'll love. There are no limits on your possibilities other than your beliefs.</p>
+                        </div>
+                    </div>
+                    <div class="result  hidden" id="f">
+                        <div class="title">
+                            <img src="SVG/ABUNDANCE.svg" alt="Abundance">
+                        </div>
+                        <div class="details regular">
+                            <p>It's easy to trick yourself into believing that you live in a world of finite opportunities
+                                and resources that determine what you can and can't have. But there's good news — you can
+                                have it all! Ample abundance is available to anyone who learns to find the ultimate peace
+                                and fulfillment that comes from appreciating the beauty of the now and fully believing that
+                                all things are available to them.</p>
+                        </div>
+                    </div>
+                    <div class="result  hidden" id="g">
+                        <div class="title">
+                            <img src="SVG/SELF-WORTH.svg" alt="Self-Worth">
+                        </div>
+                        <div class="details regular">
+                            <p>You. Are. Perfect. Even your flaws, challenges, and struggles are pure perfection because
+                                they're creating a powerful and inspiring turning point for you to manifest your greatest
+                                destiny. Food wouldn't taste as good without hunger. Relish the moments of less for the
+                                meaning that they'll give to the times of plenty, and understand that you are always
+                                wonderful and worthy.</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="regular text-color">Breaking out of limiting beliefs is easier with support. Speaking with a trusted
+                    psychic
+                    advisor can help you see the truth in your situation and surroundings, so you can banish those
+                    beliefs
+                    that aren't serving you well.</p>
+                <div class="resources-container">
+                    <div class="resources regular">
+                        <h4 class="res-color">Resources:</h4>
+                        <a
+                            href="https://elenihope.com/limiting-beliefs-blocking-happiness/?utm_medium=social&utm_source=pinterest&utm_campaign=tailwind_smartloop&utm_content=smartloop&utm_term=5221818">
+                            https://elenihope.com/limiting-beliefs-blocking-happiness/?utm_medium=social&utm_source=pinterest&utm_campaign=tailwind_smartloop&utm_content=smartloop&utm_term=5221818
+                        </a>
+                        <a href="https://medium.com/new-earth-consciousness/stop-arguing-for-your-limitations-75dc85781fc5">
+                            https://medium.com/new-earth-consciousness/stop-arguing-for-your-limitations-75dc85781fc5
+                        </a>
+                        <a href="https://tomillama.com/limiting-beliefs#LB3">
+                            https://tomillama.com/limiting-beliefs#LB3
+                        </a>
+                        <a
+                            href="http://www.livelikeamomboss.com/how-to-uncover-your-limiting-mom-beliefs-and-start-to-parent-on-your-own-terms/">
+                            http://www.livelikeamomboss.com/how-to-uncover-your-limiting-mom-beliefs-and-start-to-parent-on-your-own-terms/
+                        </a>
+                        <a
+                            href="https://medium.com/@refinedliz/20-limiting-beliefs-that-mess-with-your-dreams-b4cfeb2f66ca">
+                            https://medium.com/@refinedliz/20-limiting-beliefs-that-mess-with-your-dreams-b4cfeb2f66ca
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
 

@@ -1,6 +1,6 @@
 :root {
-    --heading-color: #461F1E;
-    --text-color: #4C1C1C;
+    --heading-color: #4B1C1C;
+    --text-color: #53181A;
     --green: #87B157;
     --diya-red: #B14E4A;
     --arrow-color: #D5C3AA;
@@ -10,8 +10,9 @@
     --matt-red: #C3615D;
     --blood-red: #C04547;
     --light-orange: #C04547;
-    --link-color: #221F20;
+    --link-color: #929396;
     --sarvodhaya-grey: #526C77;
+    --resource-red: #BF4646;
 }
 
 * {
@@ -26,6 +27,18 @@ body {
     background-color: var(--background-color);
 }
 
+.text-color {
+    color: var(--text-color);
+}
+
+.heading-color {
+    color: var(--heading-color);
+}
+
+.res-color {
+    color: var(--resource-red);
+}
+
 header {
     height: 10vh;
 }
@@ -38,18 +51,20 @@ header {
 section {
     position: absolute;
     background-color: var(--background-color);
-    height: 90vh;
+    height: 100vh;
     width: 100vw;
 }
 
 .first-page {
-    height: 90vh;
+    height: 100vh;
     z-index: 10;
-    display: none;
+    background-image: url(../SVG/background_1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .main-heading-container {
-    width: 50%;
+    width: 60%;
     margin: 0vh auto;
 }
 
@@ -64,7 +79,7 @@ section {
 
 .points-container {
     width: 60%;
-    margin: 5vh auto 10vh;
+    margin: 5vh auto 8vh;
 }
 
 .points {
@@ -77,6 +92,7 @@ section {
     margin: 0 auto;
     display: flex;
 }
+
 
 .points-text {
     background-color: var(--orange);
@@ -93,16 +109,22 @@ section {
 
 .points p {
     color: var(--text-color);
-    padding: 1em 3em;
+    padding: 0.5em 2em;
 }
 
 .start-button {
     width: 5vw;
-    margin: auto;
+    margin: 0 auto;
+    transition: all 0.2s;
+    cursor: pointer;
 }
 
 .start-button svg {
-    width: 90%;
+    width: 100%;
+}
+
+.start-button:hover {
+    transform: scale(1.1);
 }
 
 .resources {

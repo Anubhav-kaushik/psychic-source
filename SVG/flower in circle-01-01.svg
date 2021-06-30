@@ -1,22 +1,25 @@
-<svg viewBox="0 0 183.6 96.6" style="enable-background:new 0 0 183.6 96.6;" xml:space="preserve">
-<style>
-	.logo-circle{fill:#576C76;}
-	.petals{fill:none;stroke:#FFFFFF;stroke-width:1.87;stroke-miterlimit:10;}
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 183.6 96.6" style="enable-background:new 0 0 183.6 96.6;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#576C76;}
+	.st1{fill:none;stroke:#FFFFFF;stroke-width:1.87;stroke-miterlimit:10;}
 </style>
 <g>
 	<g>
-		<circle class="logo-circle" cx="91.6" cy="96.6" r="91.8"/>
+		<circle class="st0" cx="91.6" cy="96.6" r="91.8"/>
 	</g>
 </g>
 <g>
 	<g>
-		<path class="petals" d="M91.8,89.2c0,0,19.5-23.1,51.2-9.9c-4.2,3.8-8.6,7.3-13.2,10.7C120.9,96.6,109.8,101.2,91.8,89.2z"/>
-		<path class="petals" d="M125.8,75.3c0,0,10.2-10.4,12.8-17.5c0,0-30.9-2.4-46.9,31.3"/>
-		<path class="petals" d="M112.9,64.7c0,0,6.9-10.6,4.5-22.2c0,0-26.2,4.5-25.8,47.1"/>
-		<path class="petals" d="M91.9,89.2c0,0-19.6-23.1-51.3-9.9c4.2,3.8,8.6,7.3,13.2,10.7C62.7,96.6,73.9,101.2,91.9,89.2z"/>
-		<path class="petals" d="M57.9,75.3c0,0-10.2-10.4-12.8-17.5c0,0,30.9-2.4,46.9,31.3"/>
-		<path class="petals" d="M70.7,64.7c0,0-6.9-10.6-4.5-22.2c0,0,26.2,4.5,25.8,47.1"/>
-		<path class="petals" d="M99.8,55.2c0,0-0.4-14.4-7.9-21.5c0,0-6.7,6.7-7.7,22.6"/>
+		<path class="st1" d="M91.8,86.2c0,0,19.5-23.1,51.2-9.9c-4.2,3.8-8.6,7.3-13.2,10.7C120.9,93.6,109.8,98.2,91.8,86.2z"/>
+		<path class="st1" d="M125.8,72.3c0,0,10.2-10.4,12.8-17.5c0,0-30.9-2.4-46.9,31.3"/>
+		<path class="st1" d="M112.9,61.7c0,0,6.9-10.6,4.5-22.2c0,0-26.2,4.5-25.8,47.1"/>
+		<path class="st1" d="M91.9,86.2c0,0-19.6-23.1-51.3-9.9c4.2,3.8,8.6,7.3,13.2,10.7C62.7,93.6,73.9,98.2,91.9,86.2z"/>
+		<path class="st1" d="M57.9,72.3c0,0-10.2-10.4-12.8-17.5c0,0,30.9-2.4,46.9,31.3"/>
+		<path class="st1" d="M70.7,61.7c0,0-6.9-10.6-4.5-22.2c0,0,26.2,4.5,25.8,47.1"/>
+		<path class="st1" d="M99.8,52.2c0,0-0.4-14.4-7.9-21.5c0,0-6.7,6.7-7.7,22.6"/>
 	</g>
 </g>
 </svg>
