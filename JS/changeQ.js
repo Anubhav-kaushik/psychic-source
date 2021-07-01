@@ -199,6 +199,8 @@ let onScreen;
 
 function update(){
     let grp = firstFalse(groups);
+
+    console.log(answers);
     
     getStatus(questionsInGroup(parseInt(grp[1])));
     
@@ -212,6 +214,7 @@ function update(){
         } else{
             let btn = document.getElementsByClassName('submit-btn');
             btn[0].setAttribute('onclick', 'getResult()');
+            btn[0].classList.add('active-submit-btn')
             btn[0].style.backgroundColor = '#CC3A41';
             btn[0].style.cursor = 'pointer';
         }
@@ -239,6 +242,8 @@ function enterQuestions(groupNum){
     if(quesRep.length - endingValue < 0) {
         endingValue = quesRep.length;
     }
+
+    changePagination(groupNum);
 
     let quesPrefix = 'q';
 
@@ -322,6 +327,24 @@ function clearContainer(name){
     for(let i=0; i<element.length; i++) {
         element[i].innerHTML = '';
     }
+}
+
+function changePagination(pageNum){
+    let page = 'p'+pageNum;
+
+    let activeElement = document.getElementsByClassName('page-indicator');
+
+    for(let i=0; i<activeElement.length; i++){
+        activeElement[i].classList.remove('active');
+    }
+
+    let element = document.getElementsByClassName(page);
+    element[0].classList.add('active');
+
+}
+
+function reloadWindow(){
+    window.location.reload()
 }
 
 function getResult() {

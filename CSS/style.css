@@ -45,7 +45,8 @@ header {
 
 .logo {
     width: 15vw;
-    margin: 2vh auto;
+    margin: 2vh auto 8vh;
+    min-width: 12rem;
 }
 
 section {
@@ -127,6 +128,7 @@ section {
     margin: 2em auto;
     transition: all 0.2s;
     cursor: pointer;
+    transition: all 0.4;
 }
 
 .start-button svg {

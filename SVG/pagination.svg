@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 163.79 12.87">
+    <defs>
+        <style>.active p1{fill:#4c1c1c;}.passive p{fill:#d5c3aa;}</style>
+    </defs>
+    <g>
+        <g>
+            <circle class="active p1" cx="6.44" cy="6.44" r="6.44"/>
+            <circle class="passive p2" cx="44.16" cy="6.44" r="6.44"/>
+            <circle class="passive p3" cx="81.89" cy="6.44" r="6.44"/>
+            <circle class="passive p4" cx="119.62" cy="6.44" r="6.44"/>
+            <circle class="passive p5" cx="157.35" cy="6.44" r="6.44"/>
+        </g>
+    </g>
+</svg>

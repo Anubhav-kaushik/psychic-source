@@ -41,6 +41,26 @@
     align-content: center;
 }
 
+.start-again-btn {
+    box-sizing: border-box;
+    padding: 0.5em 3em;
+    margin: 0vh auto 3vh;
+    background-color: transparent;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    border-radius: 0.2em;
+    font-weight: 400;
+    border: 2px solid;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.start-again-btn:hover {
+    color: var(--background-color);
+    background-color: #bd4646;
+    border: 2px solid transparent;
+}
+
 .resources-container {
     width: 100vw;
     background-color: rgba(255, 255, 255, 0.5);

@@ -4,3 +4,12 @@
     stroke-miterlimit:10;
     stroke-width:4px;
 }
+
+.page-indicator {
+    fill:#d5c3aa;
+    transition: all 0.4s;
+}
+
+.active {
+    fill:#4c1c1c;
+}
