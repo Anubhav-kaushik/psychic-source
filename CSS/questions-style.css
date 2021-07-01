@@ -12,8 +12,15 @@
     margin: 1vh auto;
 }
 
+.labels-container {
+    justify-content: center;
+}
+
 .ques {
     border-bottom: 2px solid #9FA1A322;
+}
+
+.questions-container .text-color {
     text-align: left;
 }
 
@@ -81,12 +88,11 @@ input[type='radio'] {
 }
 
 .isize {
-    width: 10%;
-    margin-left: 0.5%;
-    margin-right: 0.5%;
+    width: 8rem;
     display: grid;
     justify-content: center;
     align-content: center;
+    margin: 0 2.5px;
 }
 
 .isize h3 {
@@ -102,7 +108,7 @@ input[type='radio'] {
     background-position: center;
     border-radius: 0.5em;
     padding: 0.5em;
-    height: 7vw;
+    height: 7rem;
 }
 
 .i2 {
@@ -111,7 +117,7 @@ input[type='radio'] {
     background-position: center;
     border-radius: 0.5em;
     padding: 0.2em;
-    height: 7vw;
+    height: 7rem;
 }
 
 .i3 {
@@ -120,7 +126,7 @@ input[type='radio'] {
     background-position: center;
     border-radius: 0.5em;
     padding: 0.5em;
-    height: 7vw;
+    height: 7rem;
 }
 
 .i4 {
@@ -129,7 +135,7 @@ input[type='radio'] {
     background-position: center;
     border-radius: 0.5em;
     padding: 0.5em;
-    height: 7vw;
+    height: 7rem;
 }
 
 .i5 {
@@ -138,7 +144,7 @@ input[type='radio'] {
     background-position: center;
     border-radius: 0.5em;
     padding: 0.5em;
-    height: 7vw;
+    height: 7rem;
 }
 
 .submit-btn {
@@ -149,4 +155,5 @@ input[type='radio'] {
     font-size: 1rem;
     border-radius: 0.5em;
     font-weight: 100;
+    border: none;
 }
