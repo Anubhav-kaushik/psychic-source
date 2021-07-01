@@ -27,15 +27,13 @@
 
 .title {
     display: flex;
-    width: 25%;
 }
 
-.title * {
-    width: 100%;
+.title img {
+    width: 15rem;
 }
 
 .details {
-    width: 75%;
     background-color: #FFC16B;
     text-align: left;
     padding: 1em 2em;
@@ -45,7 +43,7 @@
 
 .resources-container {
     width: 100vw;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.5);
     position: absolute;
     left: 0;
 }

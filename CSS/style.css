@@ -51,12 +51,12 @@ header {
 section {
     position: absolute;
     background-color: var(--background-color);
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     width: 100vw;
 }
 
 .first-page {
-    height: 100vh;
     z-index: 10;
     background-image: url(../SVG/background_1.jpg);
     background-repeat: no-repeat;
@@ -78,17 +78,27 @@ section {
 }
 
 .points-container {
-    width: 60%;
-    margin: 5vh auto 8vh;
+    width: 70%;
+    margin: 5vh auto 5vh;
+    flex-wrap: wrap;
 }
 
 .points {
-    margin: 0vh auto;
-    width: 45%;
+    margin: 10px;
+    width: 25rem;
+}
+.para {
+    min-height: 8em;
+    display: grid;
 }
 
+.para p {
+    margin: auto 0;
+}
+
+
 .points figure {
-    width: 30%;
+    width: 7rem;
     margin: 0 auto;
     display: flex;
 }
@@ -96,7 +106,7 @@ section {
 
 .points-text {
     background-color: var(--orange);
-    height: 28vh;
+    width: 100%;
 }
 
 .points h2 {
@@ -113,8 +123,8 @@ section {
 }
 
 .start-button {
-    width: 5vw;
-    margin: 0 auto;
+    width: 5rem;
+    margin: 2em auto;
     transition: all 0.2s;
     cursor: pointer;
 }
