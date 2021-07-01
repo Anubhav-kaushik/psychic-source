@@ -12,8 +12,8 @@
     margin: 1vh auto;
 }
 
-.results {
-    margin: 8vh auto;
+.calculated-result {
+    margin: 5vh auto;
 }
 
 .result {
@@ -21,8 +21,12 @@
     margin: 10px auto;
 }
 
+.result-container>h2 {
+    margin-top: -2rem;
+}
+
 .result-container> p {
-    margin-bottom: 8vh;
+    margin-bottom: 5vh;
 }
 
 .title {
@@ -30,7 +34,7 @@
 }
 
 .title img {
-    width: 15rem;
+    width: 10rem;
 }
 
 .details {
@@ -44,7 +48,7 @@
 .start-again-btn {
     box-sizing: border-box;
     padding: 0.5em 3em;
-    margin: 0vh auto 3vh;
+    margin: 0vh auto 5vh;
     background-color: transparent;
     color: var(--text-color);
     font-size: 1.2rem;

@@ -55,6 +55,7 @@ section {
     min-height: 100vh;
     height: auto;
     width: 100vw;
+    transition: all 0.4s;
 }
 
 .first-page {

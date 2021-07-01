@@ -13,3 +13,14 @@
 .active {
     fill:#4c1c1c;
 }
+
+.logo-circle {
+    fill: #576C76;
+}
+
+.sun-rays {
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 1.87;
+    stroke-miterlimit: 10;
+}

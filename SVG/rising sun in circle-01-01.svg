@@ -1,8 +1,10 @@
 <svg viewBox="0 0 183.6 96.6" style="enable-background:new 0 0 183.6 96.6;" xml:space="preserve">
+<defs>
 <style>
 	.logo-circle{fill:#576C76;}
 	.sun-rays{fill:none;stroke:#FFFFFF;stroke-width:1.87;stroke-miterlimit:10;}
 </style>
+</defs>
 <g>
 	<g>
 		<circle class="logo-circle" cx="91.6" cy="96.6" r="91.8"/>

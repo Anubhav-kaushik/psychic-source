@@ -20,7 +20,7 @@ let questions = {
     'q2': ['b', "I'm not good enough to attract the most highly successful people."], 
     'q3': ['c', "There are certain things about the way I look I just don't like."], 
     'q4': ['a', "I'm too old now to do that."], 
-    'q5': ['f', "I don't have the tools/skills/knowledge/money/strength for that."], 
+    'q5': ['f', "I don't have the tools/ skills/ knowledge/ money/ strength for that."], 
     'q6': ['c', "I don't have the self-discipline to get in shape."], 
     'q7': ['f', "I never have enough time."], 
     'q8': ['b', "I need to fix something about myself."], 
@@ -104,11 +104,11 @@ function intialValue(boo=false, to=answersStatus){
 
 function getStatus(ques){
     for(let i=0; i<ques.length; i++){
+        answersStatus[ques[i]] = isChecked(ques[i]);
         if(answersStatus[ques[i]]){
             answers[ques[i]] = getValue(ques[i])[0];
             continue;
         }
-        answersStatus[ques[i]] = isChecked(ques[i]);
     }
 
     for(let i=0; i<groups.length; i++){
@@ -138,8 +138,14 @@ function calculateAnswer(){
         let marks = answers[quesRep[i]][1];
         let cat = answers[quesRep[i]][0];
 
+        console.log(quesRep[i] + ' | ' + cat + ": " + marks)
+
         category[cat] += parseInt(marks);
+
+        console.log('aggregate ' + cat + ': ' + category[cat]);
     }
+
+    console.log(category);
 
     return top3dict(category);
 }
@@ -155,20 +161,18 @@ function top3dict(keyValue){
     let b = 0;
     let c = 0;
 
-    for(let i=0; i<values.length; i++){
-        if(a < values[i]){
-            a = values[i];
-            continue
-        } else if(b < values[i]){
-            b = values[i];
-            continue
-        } else if(c < values[i]){
-            c = values[i];
-            continue
-        }
-    }
+    a = findMax(values);
+    values = removeValue(values, a);
+
+    b = findMax(values);
+    values = removeValue(values, b);
+
+    c = findMax(values);
+    values = removeValue(values, c);
 
     firstThreeValues = [a, b, c];
+
+    console.log(firstThreeValues);
 
     for(let j=0; j<firstThreeValues.length; j++){
         for(let i=0; i<keys.length; i++){
@@ -182,6 +186,29 @@ function top3dict(keyValue){
 
     return firstThreeKeys
 
+}
+
+function findMax(numList){
+    max = 0;
+
+    for(let i=0; i<numList.length; i++){
+        if(max<numList[i]){
+            max = numList[i];
+        }
+    }
+
+    return max;
+
+}
+
+function removeValue(arr, value){
+    for( let i = 0; i < arr.length; i++){ 
+                                   
+        if ( arr[i] === value) { 
+            arr.splice(i, 1); 
+            return arr;
+        }
+    }
 }
 
 function firstFalse(groupsList){
@@ -199,8 +226,6 @@ let onScreen;
 
 function update(){
     let grp = firstFalse(groups);
-
-    console.log(answers);
     
     getStatus(questionsInGroup(parseInt(grp[1])));
     
@@ -347,6 +372,15 @@ function reloadWindow(){
     window.location.reload()
 }
 
+function addResults(cat, container){
+    let result = document.getElementById(cat);
+    result.classList.remove('hidden');
+    
+    let resCont = document.getElementsByClassName(container);
+
+    resCont[0].appendChild(result);
+}
+
 function getResult() {
     clearTimeout(timeout);
 
@@ -358,9 +392,7 @@ function getResult() {
     let resultContainer = document.getElementsByClassName('third-page');
 
     for(let i=0; i<resultCatList.length; i++) {
-        let result = document.getElementById(resultCatList[i]);
-
-        result.classList.remove('hidden');
+        addResults(resultCatList[i], 'calculated-result');
     }
 
     resultContainer[0].style.display = "block";

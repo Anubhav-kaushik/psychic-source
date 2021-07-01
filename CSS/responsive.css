@@ -7,7 +7,7 @@
     }
 }
 
-@media screen and (min-device-width: 1700px) and (max-device-width: 2000px) {
+@media screen and (min-device-width: 1800px) and (max-device-width: 2000px) {
     html {
         font-size: 19px;
     }
@@ -43,6 +43,40 @@
     }
 }
 
+@media screen and (min-device-width: 1000px) and (max-device-width: 1300px) {
+    html {
+        font-size: 15px;
+    }
+
+    .labels-container>.isize>h3 {
+        font-size: 0.75rem;
+    }
+
+    .title img {
+        height: 100%;
+        width: auto;
+    }
+}
+
+@media screen and (min-device-width: 600px) and (max-device-width: 1000px) {
+    html {
+        font-size: 13px;
+    }
+
+    .labels-container>.isize>h3 {
+        font-size: 0.65rem;
+    }
+
+    .title img {
+        height: 100%;
+        width: auto;
+    }
+
+    .details {
+        width: auto;
+    }
+}
+
 @media screen and (min-device-width: 50px) and (max-device-width: 600px) {
     html {
         font-size: 14px;
@@ -59,9 +93,54 @@
 
     .title img {
         width: 100%;
+        height: auto;
     }
 
     .logo {
         margin: 2vh auto 4vh;
+    }
+
+    .qsize {
+        width: 100%;
+    }
+
+    .qsize .text-color {
+        text-align: center;
+    }
+
+    .isize {
+        width: 18%;
+    }
+
+    .ques {
+        padding-bottom: 1em;
+    }
+    
+    .second-page .flex {
+        flex-wrap: wrap;
+    }
+
+    .labels-container {
+        flex-wrap: wrap;
+    }
+
+    .i1 {
+        background-color: #526C77;
+    }
+
+    .i2 {
+        background-color: #82A6A9;
+    }
+
+    .i3 {
+        background-color: #DB703C;
+    }
+
+    .i4 {
+        background-color: #D15A59;
+    }
+
+    .i5 {
+        background-color: #D03842;
     }
 }
