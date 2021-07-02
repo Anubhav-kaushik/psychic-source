@@ -106,7 +106,7 @@ section {
 
 .points figure {
     width: 7rem;
-    margin: 0 auto;
+    margin: 0 auto -1px;
     display: flex;
 }
 

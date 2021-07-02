@@ -82,6 +82,10 @@
         font-size: 14px;
     }
 
+    .line-break {
+        display: none;
+    }
+
     .main-heading-container,
     .points-container {
         width: 90%;
@@ -92,8 +96,14 @@
     }
 
     .title img {
-        width: 100%;
+        width: 80%;
         height: auto;
+        margin: 0 auto;
+    }
+
+    .details {
+        width: 80%;
+        margin: 0 auto;
     }
 
     .logo {
@@ -152,5 +162,15 @@
     .i5 {
         background-color: #D03842;
         height: auto;
+    }
+
+    .result-container {
+        width: 85%;
+        margin-top: 8vh;
+    }
+
+    .resources {
+        width: 80%;
+        overflow: hidden;
     }
 }
