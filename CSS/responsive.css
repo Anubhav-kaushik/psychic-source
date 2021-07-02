@@ -112,6 +112,11 @@
         width: 18%;
     }
 
+    .isize h3 {
+        font-size: 0.6rem;
+        transform: translateY(0%);
+    }
+
     .ques {
         padding-bottom: 1em;
     }
@@ -126,21 +131,26 @@
 
     .i1 {
         background-color: #526C77;
+        height: auto;
     }
 
     .i2 {
         background-color: #82A6A9;
+        height: auto;
     }
 
     .i3 {
         background-color: #DB703C;
+        height: auto;
     }
 
     .i4 {
         background-color: #D15A59;
+        height: auto;
     }
 
     .i5 {
         background-color: #D03842;
+        height: auto;
     }
 }

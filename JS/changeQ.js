@@ -231,7 +231,9 @@ function update(){
     
     if(onScreen != grp){
         if(onScreen != 'g5'){
-            clearContainer('questions-container')
+            scrollTop(0);
+
+            clearContainer('questions-container');
 
             onScreen = grp;
             
@@ -368,8 +370,14 @@ function changePagination(pageNum){
 
 }
 
+function scrollTop(y){
+    window.scrollTo(0,y);
+}
+
 function reloadWindow(){
-    window.location.reload()
+    scrollTop(0);
+
+    window.location.reload();
 }
 
 function addResults(cat, container){
@@ -381,8 +389,15 @@ function addResults(cat, container){
     resCont[0].appendChild(result);
 }
 
+function moveLeft(container){
+    let element = document.getElementsByClassName(container);
+    element[0].style.transform = 'translateX(-100%)';
+}
+
 function getResult() {
     clearTimeout(timeout);
+
+    moveLeft('second-page');
 
     let element = document.getElementsByClassName('second-page');
     element[0].style.display = 'none';
@@ -396,11 +411,12 @@ function getResult() {
     }
 
     resultContainer[0].style.display = "block";
+
+    scrollTop(0);
 }
 
 function startQuiz() {
-    let element = document.getElementsByClassName('first-page');
-    element[0].style.display = 'none';
+    moveLeft('first-page');
 
     let nextPage = document.getElementsByClassName('second-page');
     nextPage[0].style.display = 'block';

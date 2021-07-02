@@ -27,6 +27,11 @@ body {
     background-color: var(--background-color);
 }
 
+main {
+    display: flex;
+    flex-direction: row;
+}
+
 .text-color {
     color: var(--text-color);
 }
