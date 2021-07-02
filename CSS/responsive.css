@@ -56,6 +56,10 @@
         height: 100%;
         width: auto;
     }
+    
+    .line-break {
+        display: none;
+    }
 }
 
 @media screen and (min-device-width: 600px) and (max-device-width: 1000px) {
@@ -74,6 +78,10 @@
 
     .details {
         width: auto;
+    }
+    
+    .line-break {
+        display: none;
     }
 }
 
