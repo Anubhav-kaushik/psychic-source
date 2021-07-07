@@ -7,12 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/font-style.css">
     <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="SVG/favicon.ico">
     <link rel="stylesheet" href="CSS/svg-style.css">
     <link rel="stylesheet" href="CSS/questions-style.css">
     <link rel="stylesheet" href="CSS/result-style.css">
     <link rel="stylesheet" href="CSS/responsive.css">
-    <script src="JS/changeQ.js"></script>
     <title>Psychic Source</title>
 </head>
 
@@ -41,7 +39,7 @@
                             <p class="regular">You can manifest painful restrictions in your life simply by telling
                                 yourself
                                 that
-                                they exist. Fortunately, the opposite is also true. That's right:</p>
+                                they exist. Fortunately, the opposite is also true. That's right!</p>
                         </div>
                     </div>
                 </div>
@@ -56,16 +54,16 @@
                             </g>
                             <g>
                                 <g>
-                                    <path class="sun-rays"
+                                    <path class="sun"
                                         d="M120.5,96.6c0-15.9-12.9-28.7-28.7-28.7c-15.9,0-28.7,12.9-28.7,28.7" />
-                                    <line class="sun-rays" x1="26.8" y1="96" x2="156.9" y2="96" />
-                                    <line class="sun-rays" x1="92" y1="61.3" x2="92" y2="29.9" />
-                                    <line class="sun-rays" x1="79.6" y1="63.6" x2="73.4" y2="48.6" />
-                                    <line class="sun-rays" x1="67.8" y1="70.5" x2="45.5" y2="49.2" />
-                                    <line class="sun-rays" x1="60.3" y1="83.3" x2="44.5" y2="76.7" />
-                                    <line class="sun-rays" x1="105.8" y1="63.6" x2="112.1" y2="48.6" />
-                                    <line class="sun-rays" x1="117.6" y1="70.5" x2="139.9" y2="49.2" />
-                                    <line class="sun-rays" x1="125.2" y1="83.3" x2="140.9" y2="76.7" />
+                                    <line class="sun" x1="26.8" y1="96" x2="156.9" y2="96" />
+                                    <line class="sun ray sray left" x1="92" y1="61.3" x2="92" y2="29.9" />
+                                    <line class="sun ray lray left" x1="79.6" y1="63.6" x2="73.4" y2="48.6" />
+                                    <line class="sun ray sray left" x1="67.8" y1="70.5" x2="45.5" y2="49.2" />
+                                    <line class="sun ray lray left" x1="60.3" y1="83.3" x2="44.5" y2="76.7" />
+                                    <line class="sun ray lray right" x1="105.8" y1="63.6" x2="112.1" y2="48.6" />
+                                    <line class="sun ray sray right" x1="117.6" y1="70.5" x2="139.9" y2="49.2" />
+                                    <line class="sun ray lray right" x1="125.2" y1="83.3" x2="140.9" y2="76.7" />
                                 </g>
                             </g>
                         </svg>
@@ -142,11 +140,11 @@
             </figure>
             <div class="result-container">
                 <h2 class="dance heading-color">The areas that you struggle with the most are:</h2>
-                
+
                 <div class="calculated-result">
 
                 </div>
-                
+
                 <div class="results hidden">
                     <div class="result hidden" id="a">
                         <div class="title">
@@ -285,6 +283,119 @@
         </section>
 
     </main>
+
+    <script>
+        let x1 = {};
+        let x2 = {};
+        let y1 = {};
+        let y2 = {};
+        let len = {};
+        let maxlen, minlen;
+
+        let eleDirection = {};
+
+        function getCoordinate() {
+            x1 = {};
+            x2 = {};
+            y1 = {};
+            y2 = {};
+            len = {};
+
+            let rays = document.getElementsByClassName('ray');
+
+            for (let i = 0; i < rays.length; i++) {
+                let ray = rays[i];
+                x1[i] = parseInt(ray.getAttribute('x1'));
+                x2[i] = parseInt(ray.getAttribute('x2'));
+                y1[i] = parseInt(ray.getAttribute('y1'));
+                y2[i] = parseInt(ray.getAttribute('y2'));
+            }
+        }
+
+        function pythagoras(a1, a2, b1, b2) {
+            let l = Math.sqrt(Math.pow((a1 - a2), 2) + Math.pow((b1 - b2), 2));
+
+            return l;
+        }
+
+        function elementsLength() {
+            for (let i = 0; i < Object.keys(x1).length; i++) {
+                len[i] = pythagoras(x1[i], x2[i], y1[i], y2[i]);
+            }
+        }
+
+        function maxMinLen() {
+            maxlen = 0;
+            minlen = 15;
+
+            for (let i = 0; i < Object.keys(len).length; i++) {
+                if (maxlen < len[i]) {
+                    maxlen = len[i];
+                }
+            }
+        }
+
+        function move(ele, elenum, grp) {
+            let diffmax = maxlen - len[elenum];
+            let diffmin = len[elenum] - minlen;
+
+            console.log(diffmax + " | " + diffmin)
+
+            let xpart = Math.abs(x2[elenum] - x1[elenum]) / 50;
+            let ypart = Math.abs(y2[elenum] - y1[elenum]) / 50;
+
+            if (diffmax < 0) {
+                eleDirection[elenum] = 'decreasing';
+            } else if (diffmin < 0) {
+                eleDirection[elenum] = 'increasing';
+            }
+
+            if (grp == 'left') {
+                if (eleDirection[elenum] == 'decreasing') {
+                    x2[elenum] = x2[elenum] + xpart;
+                    y2[elenum] = y2[elenum] + ypart;
+                } else {
+                    x2[elenum] = x2[elenum] - xpart;
+                    y2[elenum] = y2[elenum] - ypart;
+                }
+            } else {
+                if (eleDirection[elenum] == 'decreasing') {
+                    x2[elenum] = x2[elenum] - xpart;
+                    y2[elenum] = y2[elenum] + ypart;
+                } else {
+                    x2[elenum] = x2[elenum] + xpart;
+                    y2[elenum] = y2[elenum] - ypart;
+                }
+            }
+
+            ele.setAttribute('x2', x2[elenum]);
+            ele.setAttribute('y2', y2[elenum]);
+        }
+
+        function startRising() {
+            getCoordinate();
+            elementsLength();
+            maxMinLen();
+
+
+            setInterval(function () {
+                elementsLength();
+
+                let rays = document.getElementsByClassName('ray');
+
+                for (let i = 0; i < rays.length; i++) {
+                    let clslist = rays[i].classList;
+                    let group = clslist[3]
+                    console.log(group)
+                    move(rays[i], i, group);
+                }
+            }, 50)
+        }
+
+        startRising();
+    </script>
+
+    <script src="JS/changeQ.js"></script>
 </body>
 
 </html>

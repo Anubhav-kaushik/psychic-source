@@ -138,14 +138,8 @@ function calculateAnswer(){
         let marks = answers[quesRep[i]][1];
         let cat = answers[quesRep[i]][0];
 
-        console.log(quesRep[i] + ' | ' + cat + ": " + marks)
-
         category[cat] += parseInt(marks);
-
-        console.log('aggregate ' + cat + ': ' + category[cat]);
     }
-
-    console.log(category);
 
     return top3dict(category);
 }
@@ -171,8 +165,6 @@ function top3dict(keyValue){
     values = removeValue(values, c);
 
     firstThreeValues = [a, b, c];
-
-    console.log(firstThreeValues);
 
     for(let j=0; j<firstThreeValues.length; j++){
         for(let i=0; i<keys.length; i++){
